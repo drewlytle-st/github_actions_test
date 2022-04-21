@@ -1,22 +1,23 @@
 {
-    // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
-    "ruby.rubocop.executePath": "",
-  
-    // You can use specific path
-    // "ruby.rubocop.executePath": "/Users/you/.rbenv/shims/"
-    // "ruby.rubocop.executePath": "/Users/you/.rvm/gems/ruby-2.3.2/bin/"
-    // "ruby.rubocop.executePath": "D:/bin/Ruby22-x64/bin/"
-  
-    // If not specified, it assumes a null value by default.
-    "ruby.rubocop.configFilePath": "/.rubocop.yml",
-  
-    // default true
-    "ruby.rubocop.onSave": true,
-    "editor.formatOnSave": true,
-    "yaml.customTags": [
-        "!ruby/regexp"
-    ],
-    "files.associations": {
-        "*.erb": "erb"
-      }
+  // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
+  "ruby.rubocop.executePath": "",
+
+  // You can use specific path
+  // "ruby.rubocop.executePath": "/Users/you/.rbenv/shims/"
+  // "ruby.rubocop.executePath": "/Users/you/.rvm/gems/ruby-2.3.2/bin/"
+  // "ruby.rubocop.executePath": "D:/bin/Ruby22-x64/bin/"
+
+  // If not specified, it assumes a null value by default.
+  "ruby.rubocop.configFilePath": "/.rubocop.yml",
+
+  // default true
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSave": true,
+  "yaml.customTags": ["!ruby/regexp"],
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/drew/Sites/github_actions_test/.github/workflow.yml"
   }
+}
