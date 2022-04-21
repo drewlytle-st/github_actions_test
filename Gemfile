@@ -73,5 +73,5 @@ end
 
 gem 'rubocop-rails', '~> 2.14'
 
-gem "bundle-audit", "~> 0.1.0"
-gem "brakeman", "~> 5.2"
+gem 'brakeman', '~> 5.2'
+gem 'bundle-audit', '~> 0.1.0'
