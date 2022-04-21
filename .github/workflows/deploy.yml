@@ -1,15 +1,10 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: CI/CD
 on:
   push:
     branches:
       - main
       - staging
-  pull_request: {} # Skip deploy for these
+  pull_request: {} # Deploy step will be skipped for PRs
 
 env:
   AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, e.g. us-west-1
@@ -23,7 +18,7 @@ env:
 
 jobs:
   lint:
-      name: ⬣ Lint & Check
+      name: 🚔 Lint & Security Checks
       runs-on: ubuntu-latest
       steps:
         - name: 🛑 Cancel Previous Runs
@@ -38,7 +33,7 @@ jobs:
             ruby-version: '2.7.2'
             bundler-cache: true
 
-        - name: 🔬 Lint & Run Security Check
+        - name: 🔬 Run Checks
           run: |
             bundle exec rubocop
             bundle exec brakeman -A --no-pager
