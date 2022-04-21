@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+source /environment
+cd /app
+exec bash
