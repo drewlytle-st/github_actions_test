@@ -35,7 +35,7 @@ jobs:
         - name: 💎 Setup ruby
           uses: ruby/setup-ruby@v1
           with:
-            ruby-version: '2.7'
+            ruby-version: '2.7.2'
             bundler-cache: true
 
         - name: 🔬 Lint
@@ -53,11 +53,11 @@ jobs:
         - name: 💎 Setup ruby
           uses: ruby/setup-ruby@v1
           with:
-            ruby-version: '2.7'
+            ruby-version: '2.7.2'
             bundler-cache: true
 
         - name: 🔬 Test
-          run: bin/rails test
+          run: bundle exec rake
   # deploy:
   #   name: Deploy
   #   runs-on: ubuntu-latest
