@@ -38,11 +38,9 @@ jobs:
             ruby-version: '2.7.2'
             bundler-cache: true
 
-        - name: 🔬 Lint
-          run: bundle exec rubocop
-
-        - name: 🔬 Security Check
+        - name: 🔬 Lint & Run Security Check
           run: |
+            bundle exec rubocop
             bundle exec brakeman -A --no-pager
             bundle exec bundle-audit update
             bundle exec bundle-audit check
@@ -84,7 +82,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: 🔐 Login to Amazon ECR
+      - name: 🔐 Login to AWS ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@aaf69d68aa3fb14c1d5a6be9ac61fe15b48453a2
 
