@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:latest
+FROM amd64/ubuntu:impish
 LABEL maintainer="devops@simplethread.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
