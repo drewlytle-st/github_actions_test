@@ -29,23 +29,6 @@ RUN apt-get clean && \
   zlib1g-dev \
   git 
 
-# install ruby 2.7 from https://github.com/docker-library/ruby/blob/301b52c1bb0f109e8bdbb7b6178a022030ec37ee/2.7/slim-buster/Dockerfile
-# skip installing gem documentation
-
-RUN set -eux; \
-  apt-get update; \
-  apt-get install -y --no-install-recommends \
-  bzip2 \
-  ca-certificates \
-  libffi-dev \
-  libgmp-dev \
-  libssl-dev \
-  libyaml-dev \
-  procps \
-  zlib1g-dev \
-  ; \
-  rm -rf /var/lib/apt/lists/*
-
 # skip installing gem documentation
 RUN set -eux; \
   mkdir -p /usr/local/etc; \
