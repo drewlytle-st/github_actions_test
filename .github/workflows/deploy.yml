@@ -62,6 +62,7 @@ jobs:
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
+    environment: production
     needs: [lint, test]
     # only build/deploy main branch on pushes - not PRs
     if: ${{ (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging') && github.event_name == 'push' }}
