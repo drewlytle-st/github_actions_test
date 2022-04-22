@@ -197,7 +197,6 @@ RUN chmod 0600 /root/.ssh/authorized_keys
 COPY ./docker/ssh_entrypoint.sh /usr/local/bin
 COPY ./docker/start_server.sh /usr/local/bin
 COPY ./docker/work /usr/local/bin
-RUN sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
 RUN chmod +x /usr/local/bin/ssh_entrypoint.sh
 RUN chmod +x /usr/local/bin/start_server.sh
 RUN chmod +x /usr/local/bin/work
