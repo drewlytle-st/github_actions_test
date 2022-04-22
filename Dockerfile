@@ -10,6 +10,7 @@ RUN apt-get clean && \
   software-properties-common \
   build-essential \
   postgresql-client \
+  sqlite3 \
   libpq-dev \
   vim \
   openssh-server \
